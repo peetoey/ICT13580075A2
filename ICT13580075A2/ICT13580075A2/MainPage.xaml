@@ -52,7 +52,7 @@
                                 Text="{Binding Description}"
                                 LineBreakMode="TailTruncation"/>
                             <Label
-                                Text="{Binding SellPrice, StringFormat='ราคา {0:N0} บาท'}"/>
+                                Text="{Binding SellPrice, StringFormat='ราคา {0:No} บาท'}"/>
                             <Label
                                 Text="{Binding Stock, StringFormat=' สินค้าคงเหลือ : {0}'}"/>
                             
