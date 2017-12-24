@@ -19,7 +19,7 @@ namespace ICT13580075A2
 			InitializeComponent ();
             this.product = product;
 
-            titleLabel.Text = product == null ? "เพิ่มสืนค้าใหม่" : "แก้ไขข้อมูลสินค้า";
+            titleLabel.Text = product == null ? "เพิ่มสินค้าใหม่" : "แก้ไขข้อมูลสินค้า";
 
             saveButton.Clicked += SaveButton_Clicked;
             cancelButton.Clicked += CancelButton_Clicked;
@@ -27,6 +27,7 @@ namespace ICT13580075A2
             categoryPicker.Items.Add("เสื้อ");
             categoryPicker.Items.Add("กางเกง");
             categoryPicker.Items.Add("ถุงเท้า");
+            categoryPicker.Items.Add("ไอที");
             if (product != null)
             {
                 nameEntry.Text = product.Name;
@@ -45,7 +46,7 @@ namespace ICT13580075A2
 
         async void SaveButton_Clicked(object sender, EventArgs e)
         {
-            var isOk = await DisplayAlert("ยืนยัน", "คุณต้องการบันทุกใช่หรือไม่", "ใช่", "ไม่ใช่");
+            var isOk = await DisplayAlert("ยืนยัน", "คุณต้องการบันทึกใช่หรือไม่", "ใช่", "ไม่ใช่");
             if (isOk)
             {
                 if (product == null) {
